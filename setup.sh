@@ -3,7 +3,7 @@ export STACK_DIR="$HOME/.kind-irsa"
 export ISSUER_HOSTNAME="oidc.home.bradandmarsha.com"
 
 # variables
-export ISSUER_HOSTPATH="$ISSUER_HOSTNAME/oidc"
+export ISSUER_HOSTPATH="$ISSUER_HOSTNAME"
 export PRIV_KEY="$STACK_DIR/keys/oidc-issuer.key"
 export PUB_KEY="$STACK_DIR/keys/oidc-issuer.key.pub"
 export PKCS_KEY="$STACK_DIR/keys/oidc-issuer.pub"
@@ -37,8 +37,8 @@ echo ""
 echo "#################################"
 echo "# OIDC provisioning instructions"
 echo "#################################"
-echo "Copy the file $STACK_DIR/aws/discovery.json to https://$ISSUER_HOSTNAME/.well-known/openid-configuration"
-echo "Copy the file $STACK_DIR/aws/keys.json to https://$ISSUER_HOSTNAME/keys.json"
+echo "Copy the file $STACK_DIR/aws/discovery.json to https://$ISSUER_HOSTPATH/.well-known/openid-configuration"
+echo "Copy the file $STACK_DIR/aws/keys.json to https://$ISSUER_HOSTPATH/keys.json"
 echo ""
 echo "Execute the following AWS command to provision the OIDC provider:
 
